@@ -1,0 +1,70 @@
+---
+title: "Loops"
+format: html
+editor: visual
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+#Task 1
+
+pm2_5 <- 48 #particulate matter 2.5, an indicator for air quality
+
+if(pm2_5 < 100) {
+  print("Low to moderate risk")
+}else if(100 <= pm2_5  | pm2_5 < 150) {
+  print("Unhealthy for sensitive groups")
+}else {
+  print("Health risk present")
+}
+```
+
+```{r}
+#Task 2
+species <- "blue whale"
+
+if(species == "blue whale"){
+  print("You found a whale!")
+}
+```
+
+```{r}
+#Task 3
+base_burrito <- 6.50
+main_ingredient <- "veggie"
+
+if(main_ingredient == "veggie") {
+  print(paste("The cost of your burrito is", base_burrito))
+}else if(main_ingredient == "chicken") {
+  print(paste("The cost of your burrito is", base_burrito + 3))
+}else if(main_ingredient == "steak"){
+  print(paste("The cost of your burrito is", base_burrito +3.25))
+}
+  
+
+```
+
+```{r}
+#Task 4
+fish <- c(8, 10, 12, 23)
+tank <- c("goldfish", "tetras", "guppies", "mollies")
+
+for(i in seq_along(fish)){
+  prop = fish[i] / sum(fish) * 100
+  print(paste("The percent of", tank[i], "is", prop))
+}
+```
+```{r}
+#task 5
+for(i in seq_along(month.name)){
+  print(paste0(month.name[i], " is month ", i, "."))
+}
+```
+
+
+
+
+
+
